@@ -1,0 +1,7 @@
+[build]
+  publish = "lona-salon-spa"
+
+[[headers]]
+  for = "/assets/*.mp4"
+  [headers.values]
+    Accept-Ranges = "bytes"
