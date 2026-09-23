@@ -9,3 +9,6 @@ desktop.ini
 # Editor cruft
 *.swp
 *~
+
+# Claude Code local session/tool state, never project content
+.claude/
