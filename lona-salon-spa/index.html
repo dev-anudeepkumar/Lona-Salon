@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LONA Salon &amp; Spa | Banjara Hills, Hyderabad</title>
+<meta name="description" content="Lona Salon &amp; Spa in Banjara Hills, Hyderabad. Hair, skin, nails, grooming, bridal and permanent make-up for men and women. Nothing begins until we agree.">
+<meta name="theme-color" content="#1C130D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23433022'/%3E%3Cpath d='M50 12 Q54 42 82 50 Q54 58 50 88 Q46 58 18 50 Q46 42 50 12 Z' fill='%23CEAE7A'/%3E%3C/svg%3E">
+
+<!-- DEPLOY STEP: patch og:url and og:image with the live absolute URL before zipping -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="LONA Salon &amp; Spa | Banjara Hills, Hyderabad">
+<meta property="og:description" content="Hair, skin, nails, grooming, bridal and permanent make-up for men and women. Nothing begins until we agree.">
+<meta property="og:url" content="REPLACE_AT_DEPLOY">
+<meta property="og:image" content="REPLACE_AT_DEPLOY/assets/hero-ending.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --canvas:#1C130D;
+  --panel:#2A1D14;
+  --panel-2:#433022;
+  --accent:#CEAE7A;
+  --accent-hover:#E2C795;
+  --accent-muted:#83704C;
+  --text-secondary:#BFAE95;
+  --text-primary:#F2E9DC;
+
+  --line:rgba(206,174,122,.16);
+  --line-strong:rgba(206,174,122,.34);
+
+  /* Headings: Cinzel, the classical Roman inscriptional face.
+     Running text: Minion Pro Medium first, so anyone with Adobe's font
+     installed sees the real thing. Crimson Pro is served as the public
+     fallback: the closest free old-style serif to Minion.
+     Micro-labels reuse Cinzel, which is built for spaced capitals. */
+  --display:"Cinzel","Trajan Pro",Georgia,"Times New Roman",serif;
+  --body:"Minion Pro Medium","Minion Pro Med","MinionPro-Medium","Minion Pro","Crimson Pro",Georgia,"Times New Roman",serif;
+  --mono:"Cinzel","Trajan Pro",Georgia,serif;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+
+  --tshadow:0 1px 2px rgba(5,5,10,.95),0 3px 12px rgba(5,5,10,.78),0 10px 44px rgba(5,5,10,.8);
+
+  --gut:clamp(20px,5vw,72px);
+  --sec:clamp(80px,11vh,150px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html,body{
+  overflow-x:hidden;
+  overflow-x:clip;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  background:var(--canvas);
+  color:var(--text-primary);
+  font-family:var(--body);
+  font-weight:500;                      /* Minion Pro Medium, as asked */
+  font-size:clamp(16.5px,1.18vw,19px);  /* serif x-height runs smaller than the old sans */
+  line-height:1.66;
+  letter-spacing:0;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+
+:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+::selection{background:var(--accent);color:var(--canvas)}
+
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:200;
+  background:var(--accent);color:var(--canvas);
+  padding:12px 20px;font-family:var(--mono);font-size:12px;
+}
+.skip:focus{left:12px;top:12px}
+
+.vh{
+  position:absolute!important;width:1px;height:1px;
+  padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0;
+}
+
+/* ============================================================
+   THE ENVIRONMENT LAYER  (one fixed place behind everything)
+   ============================================================ */
+.env{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(120% 80% at 78% 8%,rgba(206,174,122,.085) 0%,rgba(206,174,122,0) 58%),
+    radial-gradient(90% 70% at 12% 88%,rgba(131,112,76,.10) 0%,rgba(131,112,76,0) 62%),
+    var(--canvas);
+  animation:envdrift 84s var(--ease-soft) infinite alternate;
+  animation-delay:-21s;
+}
+@keyframes envdrift{
+  0%{transform:translate3d(0,0,0) scale(1.02)}
+  100%{transform:translate3d(-1.6%,1.4%,0) scale(1.09)}
+}
+
+.env-grain{
+  position:fixed;inset:-50%;z-index:0;pointer-events:none;opacity:.05;
+  background-image:radial-gradient(rgba(242,233,220,.5) .5px,transparent .5px);
+  background-size:3px 3px;
+}
+
+.motes{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.mote{
+  position:absolute;width:3px;height:3px;border-radius:50%;
+  background:var(--accent);opacity:.16;
+  filter:blur(.4px);
+  animation:motefloat linear infinite;
+}
+@keyframes motefloat{
+  0%{transform:translate3d(0,12vh,0)}
+  100%{transform:translate3d(2.5vw,-108vh,0)}
+}
+
+.page{position:relative;z-index:1}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:16px var(--gut);
+  transition:background .5s var(--ease),backdrop-filter .5s var(--ease),border-color .5s var(--ease),padding .5s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.nav.solid{
+  background:rgba(28,19,13,.86);
+  backdrop-filter:blur(14px) saturate(1.1);
+  border-bottom-color:var(--line);
+  padding-top:11px;padding-bottom:11px;
+}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto}
+.nav-logo img{width:clamp(104px,10vw,138px);height:auto;transition:width .5s var(--ease)}
+.nav.solid .nav-logo img{width:clamp(94px,8.4vw,116px)}
+
+.nav-links{
+  display:flex;align-items:center;gap:clamp(14px,2vw,30px);
+  list-style:none;margin:0;padding:0;
+}
+.nav-links a{
+  font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.19em;text-transform:uppercase;
+  text-decoration:none;color:var(--text-secondary);
+  padding:8px 2px;position:relative;transition:color .4s var(--ease);
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;
+  transition:transform .5s var(--ease);
+}
+.nav-links a:hover{color:var(--text-primary)}
+.nav-links a:hover::after{transform:scaleX(1)}
+
+.nav-cta{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--mono);font-weight:600;font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;
+  padding:13px 22px;border-radius:2px;border:1px solid transparent;
+  transition:background .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease),transform .45s var(--ease),box-shadow .45s var(--ease);
+}
+.btn-primary{
+  background:var(--accent);color:#241811;border-color:var(--accent);
+  box-shadow:0 0 0 rgba(206,174,122,0);
+}
+.btn-primary:hover{
+  background:var(--accent-hover);border-color:var(--accent-hover);
+  transform:translateY(-2px);box-shadow:0 10px 30px rgba(206,174,122,.2);
+}
+.btn-ghost{
+  background:transparent;color:var(--text-primary);border-color:var(--line-strong);
+}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.btn:disabled,.btn[aria-disabled="true"]{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
+.btn svg{width:14px;height:14px;flex:0 0 auto}
+
+.nav-burger{display:none;background:none;border:0;padding:10px;cursor:pointer}
+.nav-burger span{display:block;width:20px;height:1px;background:var(--text-primary);margin:5px 0;transition:transform .4s var(--ease),opacity .3s var(--ease)}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+/* 560vh, not 400vh: the flick test showed 400 gave beats 1 to 3 only 3 to 4
+   readable flicks each. Lengthened until every beat holds for 6 or more. */
+.hero{position:relative;height:560vh}
+.stage{
+  position:sticky;top:0;height:100vh;height:100svh;
+  overflow:hidden;background:var(--canvas);
+}
+
+.poster{
+  position:absolute;inset:0;
+  background-color:#20160F;
+  background-image:
+    radial-gradient(58% 44% at 72% 62%,rgba(206,174,122,.30) 0%,rgba(206,174,122,.07) 42%,rgba(206,174,122,0) 70%),
+    radial-gradient(80% 60% at 78% 14%,rgba(226,199,149,.16) 0%,rgba(226,199,149,0) 60%),
+    linear-gradient(168deg,#2E2016 0%,#20160F 46%,#150E09 100%);
+  background-size:cover;background-position:center;
+  transition:opacity 1s var(--ease);
+}
+
+#hero-video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:0;
+  will-change:transform;transform:translateZ(0);
+  transition:opacity .9s var(--ease);
+}
+.stage.video-ready #hero-video{opacity:1}
+.stage.video-ready .poster{opacity:0}
+.stage.video-failed #hero-video{display:none}
+
+.scrim{
+  position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(10,10,18,0) 35%,rgba(10,10,18,.62) 100%);
+}
+
+/* the loading ring */
+.ring-wrap{
+  position:absolute;right:var(--gut);bottom:calc(var(--gut) + 4px);
+  width:48px;height:48px;color:var(--accent);opacity:.85;
+  transition:opacity .6s var(--ease);
+}
+.stage.video-ready .ring-wrap{opacity:0;pointer-events:none}
+.ring{width:48px;height:48px;transform:rotate(-90deg)}
+.ring circle{transition:stroke-dashoffset .18s linear}
+.ring-star{position:absolute;inset:0;display:grid;place-items:center}
+.ring-star svg{width:13px;height:13px;opacity:.9}
+
+.chev{position:absolute;inset:0;display:grid;place-items:center;color:var(--accent)}
+.chev svg{width:20px;height:20px;animation:chevbob 2.6s var(--ease-soft) infinite;animation-delay:-.8s}
+@keyframes chevbob{0%,100%{transform:translateY(-3px);opacity:.5}50%{transform:translateY(3px);opacity:1}}
+
+/* ---- caption bands ---- */
+.bands{position:absolute;inset:0;pointer-events:none}
+.band{
+  position:absolute;left:var(--gut);top:0;
+  width:min(52%,660px);height:100%;
+  display:flex;flex-direction:column;justify-content:center;
+  opacity:0;text-shadow:var(--tshadow);
+}
+.band::before{
+  content:"";position:absolute;inset:-14% -22% -14% -40%;
+  pointer-events:none;z-index:-1;
+  opacity:calc(.25 + .75*var(--k,1));
+  background:radial-gradient(ellipse 74% 62% at 42% 50%,rgba(5,5,10,.66) 0%,rgba(5,5,10,.44) 46%,rgba(5,5,10,0) 76%);
+}
+.band-3::before{background:radial-gradient(ellipse 76% 60% at 42% 50%,rgba(5,5,10,.72) 0%,rgba(5,5,10,.48) 46%,rgba(5,5,10,0) 76%)}
+
+.band h2,.band p.line{
+  margin:0;font-family:var(--display);font-weight:500;
+  font-size:clamp(1.5rem,3.4vw,2.75rem);
+  line-height:1.24;letter-spacing:.014em;
+  max-width:16ch;
+}
+.band .kicker{
+  font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 20px;
+}
+
+/* per-character / per-word split spans */
+.w{display:inline-block;white-space:pre;padding:.08em 0}
+.c{display:inline-block;will-change:transform,opacity}
+
+/* (a) drift-down */
+.e-drift .w{
+  --kc:clamp(0,(var(--k,0) - var(--th,0))*2.8,1);
+  opacity:var(--kc);
+  transform:translateY(calc((1 - var(--kc)) * -26px));
+}
+/* (c) blur-to-sharp */
+.e-blur{position:relative}
+.e-blur .soft{position:absolute;inset:0;filter:blur(11px);opacity:calc(1 - var(--k,0));pointer-events:none}
+.e-blur .sharp{opacity:var(--k,0)}
+/* (b) grid snap-align */
+.e-snap .c{
+  --kc:clamp(0,(var(--k,0) - var(--th,0))*3.1,1);
+  opacity:var(--kc);
+  transform:translateX(calc((1 - var(--kc)) * var(--jx,0px)));
+}
+/* (e) word-by-word rise into a staged settle */
+.e-rise .w{
+  --kc:clamp(0,(var(--k,0) - var(--th,0))*2.6,1);
+  opacity:var(--kc);
+  transform:translateY(calc((1 - var(--kc)) * 30px));
+}
+.band-4 .settle-sub{--ks:clamp(0,(var(--k,0) - .58)*3.4,1);opacity:var(--ks);transform:translateY(calc((1 - var(--ks))*14px))}
+.band-4 .settle-cta{--kb:clamp(0,(var(--k,0) - .74)*4.2,1);opacity:var(--kb);transform:translateY(calc((1 - var(--kb))*16px))}
+
+.band .settle-sub{
+  margin:20px 0 0;font-family:var(--body);font-weight:300;
+  font-size:clamp(.95rem,1.35vw,1.12rem);color:var(--text-secondary);
+  letter-spacing:.02em;max-width:34ch;
+}
+.band .settle-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;pointer-events:auto}
+.band .btn{text-shadow:none}
+
+/* the static hero */
+.static-hero{
+  display:none;position:absolute;inset:0;z-index:3;
+  flex-direction:column;justify-content:flex-end;
+  padding:var(--gut) var(--gut) clamp(48px,10vh,90px);
+}
+.static-hero .kicker{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+.static-hero h1{
+  margin:0;font-family:var(--display);font-weight:500;
+  font-size:clamp(1.3rem,5.4vw,2.2rem);line-height:1.32;letter-spacing:.014em;
+  max-width:14ch;text-shadow:var(--tshadow);
+}
+.static-hero p{
+  margin:16px 0 0;color:var(--text-secondary);max-width:30ch;
+  font-size:clamp(.95rem,3.6vw,1.05rem);text-shadow:var(--tshadow);
+}
+.static-hero .row{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+
+/* ============================================================
+   SHARED SECTION FURNITURE
+   ============================================================ */
+.sec{position:relative;padding:var(--sec) var(--gut)}
+.wrap{max-width:1240px;margin:0 auto}
+
+.kicker{
+  font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 18px;display:flex;align-items:center;gap:10px;
+}
+.kicker .star{width:9px;height:9px;flex:0 0 auto}
+
+h2.head{
+  margin:0;font-family:var(--display);font-weight:500;
+  font-size:clamp(1.4rem,2.9vw,2.35rem);line-height:1.26;letter-spacing:.016em;
+  max-width:18ch;
+}
+h3{margin:0;font-family:var(--display);font-weight:500;letter-spacing:.022em}
+
+.lede{color:var(--text-secondary);max-width:60ch}
+
+/* the star */
+.star{display:inline-block;fill:currentColor;color:var(--accent)}
+
+/* self-drawing divider */
+.divider{display:flex;align-items:center;gap:16px;margin:0;padding:0;border:0}
+.divider .rule{flex:1 1 auto;height:1px;background:var(--line-strong);transform:scaleX(0);transform-origin:left;transition:transform 1.5s var(--ease)}
+.divider .rule.r2{transform-origin:right}
+.divider.in .rule{transform:scaleX(1)}
+.divider .star{width:11px;height:11px;opacity:0;transform:scale(.4) rotate(-45deg);transition:opacity .7s var(--ease) .5s,transform .8s var(--ease) .5s}
+.divider.in .star{opacity:1;transform:scale(1) rotate(0)}
+
+/* entrance choreography */
+.rise{opacity:0;transform:translateY(26px);transition:opacity .95s var(--ease),transform .95s var(--ease)}
+.rise.in{opacity:1;transform:none}
+.stag>*{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.stag.in>*{opacity:1;transform:none}
+.stag.in>*:nth-child(1){transition-delay:0ms}
+.stag.in>*:nth-child(2){transition-delay:80ms}
+.stag.in>*:nth-child(3){transition-delay:160ms}
+.stag.in>*:nth-child(4){transition-delay:240ms}
+.stag.in>*:nth-child(5){transition-delay:320ms}
+.stag.in>*:nth-child(6){transition-delay:400ms}
+.stag.in>*:nth-child(7){transition-delay:480ms}
+.stag.in>*:nth-child(8){transition-delay:560ms}
+/* retire the stagger once the entrance has finished, at matching specificity */
+.stag.done>*:nth-child(1),.stag.done>*:nth-child(2),.stag.done>*:nth-child(3),
+.stag.done>*:nth-child(4),.stag.done>*:nth-child(5),.stag.done>*:nth-child(6),
+.stag.done>*:nth-child(7),.stag.done>*:nth-child(8){transition-delay:0s!important}
+
+/* generated-image plates: designed even when the file is missing */
+.plate{
+  position:relative;overflow:hidden;border-radius:3px;
+  background-color:var(--panel);
+  background-image:
+    radial-gradient(70% 55% at 68% 34%,rgba(206,174,122,.20) 0%,rgba(206,174,122,.04) 46%,rgba(206,174,122,0) 74%),
+    linear-gradient(158deg,#33241A 0%,#241811 58%,#191108 100%);
+  background-size:cover;background-position:center;
+  border:1px solid var(--line);
+}
+.plate::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(21,14,9,.5) 0%,rgba(21,14,9,0) 55%);
+  opacity:.9;
+}
+.plate .plate-star{
+  position:absolute;right:16px;bottom:14px;width:15px;height:15px;
+  opacity:.5;z-index:1;
+}
+.plate.has-img{background-image:var(--img)}
+
+/* ============================================================
+   ABOUT: two column, display statement left
+   ============================================================ */
+.about .grid{
+  display:grid;gap:clamp(34px,5vw,74px);
+  grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+  align-items:start;
+}
+.about .statement{position:sticky;top:110px}
+.about .statement h2{max-width:10ch;font-size:clamp(1.5rem,3.2vw,2.6rem)}
+/* Cinzel has no italic, so the pull line takes the body serif's italic */
+.about .pull{
+  margin:34px 0 0;font-family:var(--body);font-style:italic;font-weight:500;
+  font-size:clamp(1.15rem,2vw,1.55rem);color:var(--accent);line-height:1.45;max-width:20ch;
+}
+.about .body p{margin:0 0 1.35em;color:var(--text-secondary);max-width:56ch}
+.about .body p:last-child{margin-bottom:0}
+.about .closer{
+  margin-top:34px;padding-top:26px;border-top:1px solid var(--line);
+  color:var(--text-primary);font-size:clamp(1rem,1.4vw,1.14rem);max-width:52ch;
+}
+.about .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-secondary);border:1px solid var(--line);border-radius:100px;
+  padding:8px 15px;background:rgba(67,48,34,.34);
+}
+
+/* ============================================================
+   STEPS: numbered left rail with a self-drawing hairline
+   ============================================================ */
+.steps{background:linear-gradient(180deg,rgba(42,29,20,0) 0%,rgba(42,29,20,.5) 22%,rgba(42,29,20,.5) 78%,rgba(42,29,20,0) 100%)}
+.steps .rail{position:relative;margin-top:clamp(40px,6vh,70px);padding-left:clamp(34px,5vw,72px)}
+.steps .rail::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;
+  background:var(--line);
+}
+.steps .rail .drawn{
+  position:absolute;left:0;top:6px;width:1px;background:var(--accent);
+  height:0;opacity:.55;
+}
+.step{
+  display:grid;gap:clamp(20px,3vw,48px);
+  grid-template-columns:minmax(0,1fr) minmax(0,.85fr);
+  align-items:center;
+  padding:clamp(28px,4.5vh,52px) 0;
+  border-bottom:1px solid var(--line);
+}
+.step:last-child{border-bottom:0}
+.step .num{
+  font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.2em;color:var(--accent);
+  display:block;margin-bottom:14px;
+}
+.step h3{font-size:clamp(1.05rem,1.85vw,1.45rem);line-height:1.32;margin-bottom:14px}
+.step p{margin:0;color:var(--text-secondary);max-width:46ch}
+.step .plate{aspect-ratio:4/3}
+.step:nth-child(even) .txt{order:2}
+.step:nth-child(even) .plate{order:1}
+
+/* ============================================================
+   HOLD: single centred dark stage (the interactive moment)
+   ============================================================ */
+.hold{text-align:center;padding-top:calc(var(--sec) * 1.05);padding-bottom:calc(var(--sec) * 1.05)}
+.hold .line{
+  font-family:var(--body);font-style:italic;font-weight:500;
+  font-size:clamp(1.2rem,2.4vw,1.8rem);color:var(--text-secondary);margin:0 0 clamp(28px,4vh,48px);
+}
+.hold-stage{
+  position:relative;width:min(260px,62vw);aspect-ratio:1/1;margin:0 auto;
+  display:grid;place-items:center;
+}
+.hold-o{width:100%;height:100%;overflow:visible}
+.hold-o .oring{
+  fill:none;stroke:var(--accent-muted);stroke-width:15;
+  opacity:calc(.34 + .66*var(--h,0));
+  transition:opacity .12s linear;
+}
+.hold-o .ostar{
+  fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linejoin:round;
+  stroke-dasharray:var(--slen,320);
+  stroke-dashoffset:calc(var(--slen,320) * (1 - var(--h,0)));
+}
+.hold-o .ostarfill{fill:var(--accent);opacity:calc(var(--h,0) * var(--h,0))}
+.hold-glow{
+  position:absolute;inset:-18%;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(206,174,122,.32) 0%,rgba(206,174,122,0) 62%);
+  opacity:calc(var(--h,0) * .95);
+}
+.hold-btn{
+  margin-top:clamp(28px,4vh,46px);
+  background:transparent;border:1px solid var(--line-strong);color:var(--text-primary);
+  border-radius:100px;padding:14px 30px;cursor:pointer;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  transition:border-color .5s var(--ease),color .5s var(--ease),background .5s var(--ease);
+  touch-action:none;user-select:none;-webkit-user-select:none;
+}
+.hold-btn:hover{border-color:var(--accent);color:var(--accent)}
+.hold-stage.done + .hold-btn{border-color:var(--accent);color:var(--accent);background:rgba(206,174,122,.07)}
+
+.hold-out{
+  display:flex;justify-content:center;gap:clamp(20px,4vw,54px);flex-wrap:wrap;
+  margin-top:clamp(34px,5vh,56px);
+}
+.hold-out span{
+  font-family:var(--display);font-weight:500;letter-spacing:.05em;
+  font-size:clamp(1rem,1.95vw,1.45rem);color:var(--accent);
+  opacity:0;transform:translateY(12px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
+}
+.hold-out.lit span:nth-child(1){opacity:1;transform:none;transition-delay:0ms}
+.hold-out.lit span:nth-child(2){opacity:1;transform:none;transition-delay:220ms}
+.hold-out.lit span:nth-child(3){opacity:1;transform:none;transition-delay:440ms}
+
+/* ============================================================
+   SERVICES: typographic groups
+   ============================================================ */
+.services .top{display:grid;gap:clamp(20px,4vw,60px);grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:end}
+.svc-grid{
+  display:grid;gap:1px;background:var(--line);
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:clamp(40px,6vh,70px);border:1px solid var(--line);
+}
+.svc{background:var(--canvas);padding:clamp(24px,2.6vw,38px);position:relative;transition:background .6s var(--ease)}
+.svc:hover{background:var(--panel)}
+.svc h3{font-size:clamp(1rem,1.5vw,1.22rem);letter-spacing:.05em;display:flex;align-items:center;gap:10px}
+.svc h3 .star{width:11px;height:11px;opacity:.85;transition:transform .7s var(--ease)}
+.svc:hover h3 .star{transform:rotate(90deg) scale(1.15)}
+.svc ul{list-style:none;margin:18px 0 0;padding:0}
+.svc li{
+  color:var(--text-secondary);font-size:.925rem;line-height:1.55;
+  padding:5px 0 5px 16px;position:relative;
+}
+.svc li::before{
+  content:"";position:absolute;left:0;top:.78em;width:4px;height:4px;
+  background:var(--accent-muted);border-radius:50%;
+}
+.services .closer{
+  margin-top:clamp(34px,5vh,54px);text-align:center;
+  font-family:var(--body);font-style:italic;font-size:clamp(1.08rem,1.9vw,1.4rem);
+  color:var(--text-secondary);max-width:54ch;margin-left:auto;margin-right:auto;line-height:1.55;
+}
+
+/* ============================================================
+   SHOP: card grid with a basket
+   ============================================================ */
+.shop{background:var(--panel)}
+.shop .top{display:grid;gap:clamp(20px,4vw,60px);grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}
+.tiles{
+  display:grid;gap:clamp(14px,1.5vw,20px);
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  margin-top:clamp(40px,6vh,68px);
+}
+.tile{
+  position:relative;display:flex;flex-direction:column;justify-content:space-between;
+  min-height:212px;padding:22px;border:1px solid var(--line);border-radius:3px;
+  background:linear-gradient(158deg,rgba(67,48,34,.62) 0%,rgba(28,19,13,.5) 100%);
+  transition:border-color .5s var(--ease),transform .5s var(--ease),background .5s var(--ease);
+}
+.tile:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+.tile.added{border-color:var(--accent);background:linear-gradient(158deg,rgba(206,174,122,.16) 0%,rgba(28,19,13,.5) 100%)}
+.tile .cat{font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-muted)}
+.tile h3{font-size:clamp(.95rem,1.2vw,1.06rem);margin:13px 0 0;line-height:1.38;letter-spacing:.028em}
+.tile .price{font-family:var(--body);font-style:italic;font-size:.92rem;color:var(--text-secondary);margin-top:9px}
+.tile .tstar{position:absolute;right:18px;top:18px;width:12px;height:12px;opacity:.28;transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.tile.added .tstar{opacity:1;transform:rotate(90deg)}
+.add{
+  margin-top:20px;align-self:flex-start;
+  background:transparent;border:1px solid var(--line-strong);color:var(--text-primary);
+  border-radius:100px;padding:9px 18px;cursor:pointer;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  transition:border-color .4s var(--ease),color .4s var(--ease),background .4s var(--ease);
+}
+.add:hover{border-color:var(--accent);color:var(--accent)}
+.tile.added .add{border-color:var(--accent);background:var(--accent);color:#241811}
+
+.basket{
+  margin-top:clamp(30px,4vh,48px);
+  border:1px solid var(--line-strong);border-radius:3px;
+  padding:clamp(20px,2.4vw,30px);
+  background:rgba(28,19,13,.55);
+  display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;
+}
+.basket .list{flex:1 1 300px;min-width:0}
+.basket .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.basket .items{color:var(--text-secondary);font-size:.95rem;line-height:1.6}
+.basket .items em{font-style:normal;opacity:.55}
+
+/* ============================================================
+   CALENDAR: centred month grid
+   ============================================================ */
+.cal .head-row{text-align:center}
+.cal .head-row .kicker{justify-content:center}
+.cal .head-row h2{margin-left:auto;margin-right:auto}
+.cal .lede{margin:20px auto 0;text-align:center}
+
+.calbox{
+  max-width:520px;margin:clamp(40px,6vh,66px) auto 0;
+  border:1px solid var(--line);border-radius:4px;
+  background:rgba(42,29,20,.5);padding:clamp(18px,2.4vw,26px);
+}
+.cal-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.cal-title{font-family:var(--display);font-size:1.02rem;font-weight:500;letter-spacing:.06em}
+.cal-nav{background:transparent;border:1px solid var(--line);color:var(--text-primary);
+  width:34px;height:34px;border-radius:50%;cursor:pointer;display:grid;place-items:center;
+  transition:border-color .4s var(--ease),color .4s var(--ease)}
+.cal-nav:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.cal-nav:disabled{opacity:.3;cursor:not-allowed}
+.cal-nav svg{width:12px;height:12px}
+
+.cal-dow,.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-dow span{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent-muted);text-align:center;padding:6px 0;
+}
+.day{
+  aspect-ratio:1/1;display:grid;place-items:center;border-radius:3px;
+  background:transparent;border:1px solid transparent;color:var(--text-primary);
+  font-family:var(--mono);font-size:12.5px;cursor:pointer;
+  transition:background .35s var(--ease),border-color .35s var(--ease),color .35s var(--ease);
+}
+.day:hover:not(:disabled){background:rgba(206,174,122,.12);border-color:var(--line-strong)}
+.day:disabled{color:rgba(191,174,149,.26);cursor:not-allowed}
+.day.blank{cursor:default;pointer-events:none}
+.day.sel{background:var(--accent);color:#241811;border-color:var(--accent)}
+
+.slots{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;justify-content:center}
+.slot{
+  background:transparent;border:1px solid var(--line);color:var(--text-secondary);
+  border-radius:100px;padding:10px 18px;cursor:pointer;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  transition:border-color .4s var(--ease),color .4s var(--ease),background .4s var(--ease);
+}
+.slot:hover{border-color:var(--accent);color:var(--accent)}
+.slot.sel{background:var(--accent);border-color:var(--accent);color:#241811}
+.cal-go{margin-top:22px;width:100%}
+.cal-note{margin:14px 0 0;text-align:center;font-family:var(--body);font-style:italic;font-size:.92rem;color:var(--accent-muted)}
+
+/* ============================================================
+   ANSWERS: full width accordion
+   ============================================================ */
+.faq .wrap{max-width:880px}
+.faq .head-row{margin-bottom:clamp(34px,5vh,56px)}
+.qa{border-top:1px solid var(--line)}
+.qa:last-of-type{border-bottom:1px solid var(--line)}
+.qa button{
+  width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
+  background:transparent;border:0;cursor:pointer;text-align:left;
+  padding:24px 0;color:var(--text-primary);
+  font-family:var(--display);font-size:clamp(.92rem,1.35vw,1.08rem);font-weight:500;line-height:1.5;letter-spacing:.018em;
+  transition:color .45s var(--ease);
+}
+.qa button:hover{color:var(--accent)}
+.qa .pm{position:relative;flex:0 0 auto;width:14px;height:14px;margin-top:.42em}
+.qa .pm::before,.qa .pm::after{
+  content:"";position:absolute;left:0;top:6px;width:14px;height:1.5px;background:var(--accent);
+  transition:transform .5s var(--ease);
+}
+.qa .pm::after{transform:rotate(90deg)}
+.qa[open] .pm::after{transform:rotate(0)}
+.qa .ans{overflow:hidden;height:0;transition:height .55s var(--ease)}
+.qa .ans p{margin:0 0 26px;color:var(--text-secondary);max-width:62ch;padding-right:34px}
+
+/* ============================================================
+   CONTACT: two column
+   ============================================================ */
+.contact{background:var(--panel)}
+.contact .grid{display:grid;gap:clamp(34px,5vw,76px);grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+.contact .lede{margin-top:22px}
+.contact .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.info{list-style:none;margin:0;padding:0}
+.info li{padding:17px 0;border-bottom:1px solid var(--line);display:grid;gap:5px}
+.info li:first-child{padding-top:0}
+.info .t{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-muted)}
+.info .v{color:var(--text-primary);font-size:1rem;line-height:1.6}
+.info a{text-decoration:none;border-bottom:1px solid var(--line-strong);transition:color .4s var(--ease),border-color .4s var(--ease)}
+.info a:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot{padding:clamp(52px,7vh,80px) var(--gut) 34px;border-top:1px solid var(--line)}
+.foot .grid{display:grid;gap:clamp(30px,4vw,60px);grid-template-columns:minmax(0,1.1fr) repeat(2,minmax(0,1fr));align-items:start}
+.foot img.mark{width:118px;height:auto;margin-bottom:20px}
+.foot p{margin:0;color:var(--text-secondary);font-size:.9rem;max-width:34ch}
+.foot h4{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 16px;font-weight:400}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{padding:5px 0;color:var(--text-secondary);font-size:.9rem}
+.foot a{text-decoration:none;transition:color .4s var(--ease)}
+.foot a:hover{color:var(--accent)}
+.foot .base{
+  margin-top:clamp(40px,5vh,62px);padding-top:22px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-muted);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1080px){
+  .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .about .grid,.contact .grid,.services .top,.shop .top{grid-template-columns:1fr}
+  .about .statement{position:static}
+  .step{grid-template-columns:1fr}
+  .step:nth-child(even) .txt{order:0}
+  .step:nth-child(even) .plate{order:0}
+  .band{width:calc(100% - var(--gut) * 2)}
+}
+@media (max-width:760px){
+  .nav-links{
+    position:fixed;inset:0 0 auto;top:0;padding:88px var(--gut) 34px;
+    flex-direction:column;align-items:flex-start;gap:6px;
+    background:rgba(28,19,13,.97);backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);
+    transform:translateY(-102%);transition:transform .55s var(--ease);
+  }
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{font-size:15px;letter-spacing:.14em;padding:12px 0}
+  .nav-burger{display:block;order:3}
+  .nav-cta .btn-label{display:none}
+  .nav-cta .btn{padding:12px 15px}
+  .svc-grid,.tiles{grid-template-columns:1fr}
+  .foot .grid{grid-template-columns:1fr}
+}
+@media (max-height:560px){
+  .ring-wrap{display:none}
+}
+@media (pointer:coarse){
+  .btn,.add,.slot,.hold-btn,.cal-nav{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+  .day{min-height:40px}
+}
+
+/* ============================================================
+   THE FIVE STATIC-HERO GATES
+   These five conditions must match the GATES array in JS
+   character for character.
+   ============================================================ */
+@media (max-width: 720px),
+       (orientation: portrait) and (max-width: 1024px),
+       (orientation: portrait) and (pointer: coarse),
+       (orientation: landscape) and (pointer: coarse) and (max-height: 560px),
+       (prefers-reduced-motion: reduce){
+  .hero{height:100vh;height:100svh}
+  .bands,.ring-wrap,#hero-video{display:none}
+  .static-hero{display:flex}
+  .poster{opacity:1}
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.001ms!important;
+    transition-delay:0s!important;
+    scroll-behavior:auto!important;
+  }
+  .rise,.stag>*{opacity:1;transform:none}
+  .divider .rule{transform:scaleX(1)}
+  .divider .star{opacity:1;transform:none}
+  .hold-out span{opacity:1;transform:none}
+  .motes,.env-grain{display:none}
+  .env{animation:none}
+  /* positional transforms re-applied per breakpoint, never blanket-killed */
+  .step:nth-child(even) .txt{order:2}
+  .step:nth-child(even) .plate{order:1}
+  @media (max-width:900px){
+    .step:nth-child(even) .txt{order:0}
+    .step:nth-child(even) .plate{order:0}
+  }
+}
+
+/* pause every animation on a hidden tab or an off-screen section */
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="env" aria-hidden="true"></div>
+<div class="env-grain" aria-hidden="true"></div>
+<div class="motes" id="motes" aria-hidden="true"></div>
+
+<!-- one star, referenced everywhere -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-star" viewBox="0 0 100 100">
+      <path d="M50 6 Q54.5 41 94 50 Q54.5 59 50 94 Q45.5 59 6 50 Q45.5 41 50 6 Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="page">
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav" aria-label="Main">
+  <a class="nav-logo" href="#top" aria-label="LONA Salon and Spa, back to top">
+    <img id="nav-logo-img" src="assets/logo-gold.png" alt="LONA Salon &amp; Spa" width="480" height="186">
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#calendar">Calendar</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" id="nav-book" href="#book">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15l-1.2 4.4 4.5-1.2A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.8-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.4.1.6-.1l.9-1c.2-.2.3-.2.6-.1l2 .9c.3.1.5.2.6.3.1.2.1.8-.1 1.4Z"/></svg>
+      <span class="btn-label">Book on WhatsApp</span>
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+<span id="top"></span>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="hero" aria-label="Introduction">
+  <div class="stage" id="stage">
+
+    <div class="poster" id="poster" aria-hidden="true"></div>
+    <video id="hero-video" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+    <div class="scrim" aria-hidden="true"></div>
+
+    <div class="ring-wrap" id="ring-wrap" aria-hidden="true">
+      <svg class="ring" id="ring" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(206,174,122,.18)" stroke-width="2"/>
+        <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/>
+      </svg>
+      <span class="ring-star"><svg viewBox="0 0 100 100" class="star"><use href="#s-star"/></svg></span>
+    </div>
+
+    <!-- the scroll journey -->
+    <div class="bands scrub-only" id="bands" aria-hidden="true">
+
+      <div class="band band-1 e-drift" data-a="0" data-b="0.22" data-entrance="drift">
+        <p class="kicker">Banjara Hills, Hyderabad</p>
+        <h2 data-split="word">Nothing begins until we agree.</h2>
+      </div>
+
+      <div class="band band-2 e-blur" data-a="0.27" data-b="0.49" data-entrance="blur" data-ramp="0.036">
+        <h2 class="soft" aria-hidden="true">You tell us. We say it back. Then we start.</h2>
+        <h2 class="sharp">You tell us. We say it back. Then we start.</h2>
+      </div>
+
+      <div class="band band-3 e-snap" data-a="0.54" data-b="0.76" data-entrance="snap" data-spread="0.55">
+        <h2 data-split="char">Hair. Skin. Nails. Bridal. Grooming.</h2>
+      </div>
+
+      <div class="band band-4 e-rise" data-a="0.81" data-b="1" data-entrance="rise">
+        <h2 data-split="word">LONA Salon &amp; Spa</h2>
+        <p class="settle-sub">Banjara Hills, Hyderabad.</p>
+        <div class="settle-cta">
+          <a class="btn btn-primary" href="#book">Book on WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+919133100556">Call us</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- the designed still hero: phones, portrait tablets, reduced motion -->
+    <div class="static-hero" id="static-hero">
+      <p class="kicker">Banjara Hills, Hyderabad</p>
+      <h1>Nothing begins until we agree.</h1>
+      <p>Salon and spa for men and women in Banjara Hills, Hyderabad.</p>
+      <div class="row">
+        <a class="btn btn-primary" href="#book">Book on WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+919133100556">Call us</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="sec about" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="grid">
+
+      <div class="statement">
+        <p class="kicker rise"><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>About</p>
+        <h2 class="head rise" id="about-h">Where Beauty Meets Luxury</h2>
+        <p class="pull rise">Your Beauty. Your Style. Your Experience.</p>
+      </div>
+
+      <div class="body">
+        <div class="stag">
+          <p>Welcome to Lona Salon &amp; Spa, a premium beauty and wellness destination for both men and women. We bring together expert professionals, modern techniques, premium products, and a relaxing environment to create a beauty experience that goes beyond the ordinary.</p>
+          <p>From everyday grooming to complete transformations and special-occasion beauty, every service at Lona is thoughtfully tailored to your individual style and needs. Whether it's a precision haircut, a rejuvenating facial, a relaxing spa treatment, or your perfect bridal look, our team focuses on exceptional results and attention to every detail.</p>
+          <p>At Lona, we believe self-care is an experience. That's why we place equal importance on beauty, comfort, hygiene, and personalised service. Every visit is designed to leave you feeling refreshed, confident, and beautifully renewed.</p>
+        </div>
+        <p class="closer rise">Step into Lona Salon &amp; Spa and discover a space where elegance, relaxation, and expert care come together, all under one roof.</p>
+        <div class="badges stag">
+          <span class="chip">Men and women</span>
+          <span class="chip">L'Or&eacute;al</span>
+          <span class="chip">Redken</span>
+          <span class="chip">Bridal specialists</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STEPS ============================ -->
+<section class="sec steps" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <p class="kicker rise"><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>How a visit starts</p>
+    <h2 class="head rise" id="how-h">The part most salons skip.</h2>
+
+    <div class="rail" id="rail">
+      <span class="drawn" id="rail-drawn" aria-hidden="true"></span>
+
+      <article class="step rise">
+        <div class="txt">
+          <span class="num">01</span>
+          <h3>You talk first.</h3>
+          <p>Before anything is touched, you tell us what you want and what you are worried about. There is no rush on this part.</p>
+        </div>
+        <div class="plate" data-img="assets/step-01.jpg" role="img" aria-label="A quiet consultation corner at Lona">
+          <svg class="star plate-star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>
+        </div>
+      </article>
+
+      <article class="step rise">
+        <div class="txt">
+          <span class="num">02</span>
+          <h3>We say it back.</h3>
+          <p>Your artist repeats the plan out loud, in plain words, so you hear it before it happens. If the two pictures do not match, we keep talking.</p>
+        </div>
+        <div class="plate" data-img="assets/step-02.jpg" role="img" aria-label="A lit mirror station at Lona">
+          <svg class="star plate-star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>
+        </div>
+      </article>
+
+      <article class="step rise">
+        <div class="txt">
+          <span class="num">03</span>
+          <h3>Then we begin.</h3>
+          <p>Only once you have said yes to the plan. No surprises in the mirror at the end.</p>
+        </div>
+        <div class="plate" data-img="assets/step-03.jpg" role="img" aria-label="Tools laid out ready at Lona">
+          <svg class="star plate-star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOLD ============================ -->
+<section class="sec hold" id="pause" aria-labelledby="pause-h">
+  <div class="wrap">
+    <h2 class="vh" id="pause-h">This is the pause</h2>
+    <p class="line rise">This is the pause.</p>
+
+    <div class="hold-stage" id="hold-stage">
+      <span class="hold-glow" aria-hidden="true"></span>
+      <svg class="hold-o" viewBox="0 0 200 200" aria-hidden="true">
+        <ellipse class="oring" cx="100" cy="100" rx="62" ry="80"/>
+        <path class="ostarfill" d="M100 58 Q102.6 79 127 85 Q102.6 91 100 112 Q97.4 91 73 85 Q97.4 79 100 58 Z"/>
+        <path class="ostar" id="ostar-path" d="M100 58 Q102.6 79 127 85 Q102.6 91 100 112 Q97.4 91 73 85 Q97.4 79 100 58 Z"/>
+      </svg>
+    </div>
+
+    <button class="hold-btn" id="hold-btn" aria-describedby="hold-help">Press and hold</button>
+    <p class="vh" id="hold-help">Press and hold the button to complete the mark. Activating it once shows the finished state.</p>
+
+    <div class="hold-out" id="hold-out" aria-live="polite">
+      <span>Heard.</span><span>Agreed.</span><span>Then begun.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="sec services" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <p class="kicker rise"><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Services</p>
+        <h2 class="head rise" id="svc-h">Complete Beauty &amp; Grooming, All Under One Roof</h2>
+      </div>
+      <p class="lede rise">At Lona Salon &amp; Spa, we offer a comprehensive range of salon, spa, skincare, nail, makeup, and grooming services for both men and women.</p>
+    </div>
+
+    <div class="svc-grid stag">
+
+      <div class="svc">
+        <h3><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Hair</h3>
+        <ul>
+          <li>Haircuts &amp; Hair Trimming</li><li>Hairstyling</li><li>Blow-Dry</li>
+          <li>Hair Wash, Shampoo &amp; Conditioning</li><li>Hair Colour</li><li>Haircut &amp; Colour</li>
+          <li>Highlights &amp; Creative Colouring</li><li>Hair Extensions</li><li>Hair Smoothening</li>
+          <li>Hair Spa</li><li>Hair Treatments</li><li>L'Or&eacute;al Hair Treatments</li><li>Redken Hair Treatments</li>
+        </ul>
+      </div>
+
+      <div class="svc">
+        <h3><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Skin &amp; Beauty</h3>
+        <ul>
+          <li>Skincare Treatments</li><li>Facials</li><li>Korean Skincare Facials</li>
+          <li>Clean-Ups</li><li>D-Tan Services</li><li>Skin Peels</li><li>Body Polish</li>
+          <li>Eyebrow Threading</li><li>Body Waxing</li><li>Permanent Hair Removal</li>
+        </ul>
+      </div>
+
+      <div class="svc">
+        <h3><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Nails &amp; Hands/Feet</h3>
+        <ul>
+          <li>Manicure</li><li>Pedicure</li><li>Nail Care</li>
+          <li>Nail Art</li><li>Nail Artistry</li><li>Nail Bar</li>
+        </ul>
+      </div>
+
+      <div class="svc">
+        <h3><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Grooming</h3>
+        <ul>
+          <li>Shaving</li><li>Beard Trimming</li><li>Complete Grooming Services</li>
+          <li>Head Massage</li><li>Body Spa</li>
+        </ul>
+      </div>
+
+      <div class="svc">
+        <h3><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Makeup &amp; Bridal</h3>
+        <ul>
+          <li>Bridal Makeup</li><li>Groom Makeup</li><li>Party Makeup</li>
+          <li>Bridal Packages</li><li>Pre-Bridal Packages</li><li>Bridal Hairstyles</li><li>Saree Draping</li>
+        </ul>
+      </div>
+
+      <div class="svc">
+        <h3><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Lashes &amp; Enhancements</h3>
+        <ul>
+          <li>Eyelash Extensions</li><li>Permanent Makeup</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="closer rise">From everyday grooming to your most important occasions, Lona is here to help you look your best and feel your finest.</p>
+
+    <div class="divider" style="margin-top:clamp(40px,6vh,64px)" aria-hidden="true">
+      <span class="rule"></span>
+      <svg class="star" viewBox="0 0 100 100"><use href="#s-star"/></svg>
+      <span class="rule r2"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SHOP ============================ -->
+<section class="sec shop" id="shop" aria-labelledby="shop-h">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <p class="kicker rise"><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Shop</p>
+        <h2 class="head rise" id="shop-h">Build your visit.</h2>
+      </div>
+      <p class="lede rise">Add what you want to your list. When you are done, send the whole list to us on WhatsApp and we will come back with times and a price.</p>
+    </div>
+
+    <div class="tiles stag" id="tiles">
+      <!-- tiles are written here in HTML so the page works with no JavaScript -->
+      <div class="tile" data-name="Haircut &amp; Styling"><svg class="star tstar" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg><div><span class="cat">Hair</span><h3>Haircut &amp; Styling</h3><p class="price">Price on request</p></div><button class="add" type="button">Add</button></div>
+      <div class="tile" data-name="Hair Colour &amp; Highlights"><svg class="star tstar" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg><div><span class="cat">Hair</span><h3>Hair Colour &amp; Highlights</h3><p class="price">Price on request</p></div><button class="add" type="button">Add</button></div>
+      <div class="tile" data-name="Hair Spa &amp; Treatments"><svg class="star tstar" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg><div><span class="cat">Hair</span><h3>Hair Spa &amp; Treatments</h3><p class="price">Price on request</p></div><button class="add" type="button">Add</button></div>
+      <div class="tile" data-name="Korean Skincare Facial"><svg class="star tstar" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg><div><span class="cat">Skin</span><h3>Korean Skincare Facial</h3><p class="price">Price on request</p></div><button class="add" type="button">Add</button></div>
+      <div class="tile" data-name="Manicure &amp; Pedicure"><svg class="star tstar" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg><div><span class="cat">Nails</span><h3>Manicure &amp; Pedicure</h3><p class="price">Price on request</p></div><button class="add" type="button">Add</button></div>
+      <div class="tile" data-name="Bridal Makeup"><svg class="star tstar" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg><div><span class="cat">Bridal</span><h3>Bridal Makeup</h3><p class="price">Price on request</p></div><button class="add" type="button">Add</button></div>
+      <div class="tile" data-name="Shave, Beard &amp; Grooming"><svg class="star tstar" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg><div><span class="cat">Grooming</span><h3>Shave, Beard &amp; Grooming</h3><p class="price">Price on request</p></div><button class="add" type="button">Add</button></div>
+      <div class="tile" data-name="Permanent Makeup"><svg class="star tstar" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg><div><span class="cat">Enhancements</span><h3>Permanent Makeup</h3><p class="price">Price on request</p></div><button class="add" type="button">Add</button></div>
+    </div>
+
+    <div class="basket rise">
+      <div class="list">
+        <p class="lbl">Your list</p>
+        <p class="items" id="basket-items"><em>Nothing added yet.</em></p>
+      </div>
+      <a class="btn btn-primary" id="basket-send" href="#" aria-disabled="true">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15l-1.2 4.4 4.5-1.2A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.8-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.4.1.6-.1l.9-1c.2-.2.3-.2.6-.1l2 .9c.3.1.5.2.6.3.1.2.1.8-.1 1.4Z"/></svg>
+        Send my list on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CALENDAR ============================ -->
+<section class="sec cal" id="calendar" aria-labelledby="cal-h">
+  <div class="wrap">
+    <div class="head-row">
+      <p class="kicker rise" style="justify-content:center"><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Calendar</p>
+      <h2 class="head rise" id="cal-h" style="margin-inline:auto">Pick a day that suits you.</h2>
+      <p class="lede rise">Choose a date and a rough time. We will confirm on WhatsApp, usually the same day.</p>
+    </div>
+
+    <div class="calbox rise">
+      <div class="cal-top">
+        <button class="cal-nav" id="cal-prev" type="button" aria-label="Previous month">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <span class="cal-title" id="cal-title" aria-live="polite">&nbsp;</span>
+        <button class="cal-nav" id="cal-next" type="button" aria-label="Next month">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="cal-dow" aria-hidden="true">
+        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+      </div>
+      <div class="cal-days" id="cal-days" role="group" aria-label="Choose a date"></div>
+
+      <div class="slots" role="group" aria-label="Choose a time of day">
+        <button class="slot" type="button" data-slot="Morning">Morning</button>
+        <button class="slot" type="button" data-slot="Afternoon">Afternoon</button>
+        <button class="slot" type="button" data-slot="Evening">Evening</button>
+      </div>
+
+      <a class="btn btn-primary cal-go" id="cal-go" href="#" aria-disabled="true">Request this date</a>
+      <p class="cal-note" id="cal-note">Pick a date to continue</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ANSWERS ============================ -->
+<section class="sec faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="head-row">
+      <p class="kicker rise"><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Before you book</p>
+      <h2 class="head rise" id="faq-h">The things people actually ask.</h2>
+    </div>
+
+    <div class="stag" id="faq-list">
+      <div class="qa">
+        <button type="button" aria-expanded="false">What if you cut more than I asked for?<span class="pm" aria-hidden="true"></span></button>
+        <div class="ans"><p>That is the fear, and it is a fair one. It is exactly why your artist says the plan back to you before starting. Length gets agreed out loud, and nothing goes past what you agreed.</p></div>
+      </div>
+      <div class="qa">
+        <button type="button" aria-expanded="false">Will I actually get to explain what I want?<span class="pm" aria-hidden="true"></span></button>
+        <div class="ans"><p>Yes, and you get to explain it first, before anyone picks anything up. If we are not seeing the same picture yet, we keep talking until we are.</p></div>
+      </div>
+      <div class="qa">
+        <button type="button" aria-expanded="false">Permanent make-up scares me. What if it comes out too dark?<span class="pm" aria-hidden="true"></span></button>
+        <div class="ans"><p>We map the shape on your face and match the pigment to your skin, then you look in the mirror and approve it before a needle touches you. It also softens as it heals.</p></div>
+      </div>
+      <div class="qa">
+        <button type="button" aria-expanded="false">What does it cost?<span class="pm" aria-hidden="true"></span></button>
+        <div class="ans"><p>It depends on what you want done, so we quote you before anything starts, never after. Message us on WhatsApp with what you have in mind and we will send you a figure.</p></div>
+      </div>
+      <div class="qa">
+        <button type="button" aria-expanded="false">How long should I set aside?<span class="pm" aria-hidden="true"></span></button>
+        <div class="ans"><p>A trim is quick. Colour, bridal and permanent make-up need a proper slot. Tell us what you are after and we will tell you exactly how long to keep free.</p></div>
+      </div>
+      <div class="qa">
+        <button type="button" aria-expanded="false">Do you do men as well?<span class="pm" aria-hidden="true"></span></button>
+        <div class="ans"><p>Yes. Cuts, beard work, head massage, facials and full grooming. Half of what we do is for men.</p></div>
+      </div>
+      <div class="qa">
+        <button type="button" aria-expanded="false">I have never been in before. Is that awkward?<span class="pm" aria-hidden="true"></span></button>
+        <div class="ans"><p>No. Say at the door that it is your first time and we slow the whole thing down.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="sec contact" id="contact" aria-labelledby="con-h">
+  <span id="book"></span>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="kicker rise"><svg class="star" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-star"/></svg>Contact</p>
+        <h2 class="head rise" id="con-h">Come and see us.</h2>
+        <p class="lede rise">Message us on WhatsApp and one of us will answer, usually the same day. Tell us what you are thinking about and we will tell you honestly what it takes.</p>
+        <div class="row rise">
+          <a class="btn btn-primary" id="contact-wa" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15l-1.2 4.4 4.5-1.2A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.8-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.4.1.6-.1l.9-1c.2-.2.3-.2.6-.1l2 .9c.3.1.5.2.6.3.1.2.1.8-.1 1.4Z"/></svg>
+            Book on WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="tel:+919133100556">Call us</a>
+        </div>
+      </div>
+
+      <ul class="info stag">
+        <li><span class="t">Address</span><span class="v">Lona Salon &amp; Spa<br>8-3-269/S/44, 3rd Floor, Sagar Society<br>Banjara Hills, Hyderabad, Telangana 500034</span></li>
+        <li><span class="t">Phone</span><span class="v"><a href="tel:+919133100556">+91 91331 00556</a></span></li>
+        <li><span class="t">Email</span><span class="v"><a href="mailto:lonasalonandspa@gmail.com">lonasalonandspa@gmail.com</a></span></li>
+        <li><span class="t">Instagram</span><span class="v"><a href="https://instagram.com/lonasalonandspa" target="_blank" rel="noopener">@lonasalonandspa</a></span></li>
+        <li><span class="t">Getting here</span><span class="v"><a href="https://maps.google.com/?q=Lona+Salon+and+Spa+Sagar+Society+Banjara+Hills+Hyderabad" target="_blank" rel="noopener">Open in Google Maps</a></span></li>
+        <li><span class="t">Hours</span><span class="v">Message or call and we will tell you the next free slot.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <img class="mark" src="assets/logo-gold.png" alt="LONA Salon &amp; Spa" width="480" height="186">
+        <p>Hair, skin, nails, grooming, bridal and permanent make-up for men and women in Banjara Hills, Hyderabad.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Hair</a></li>
+          <li><a href="#services">Skin &amp; Beauty</a></li>
+          <li><a href="#services">Nails &amp; Hands/Feet</a></li>
+          <li><a href="#services">Grooming</a></li>
+          <li><a href="#services">Makeup &amp; Bridal</a></li>
+          <li><a href="#services">Lashes &amp; Enhancements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li>Sagar Society, Banjara Hills</li>
+          <li>Hyderabad, Telangana 500034</li>
+          <li><a href="tel:+919133100556">+91 91331 00556</a></li>
+          <li><a href="mailto:lonasalonandspa@gmail.com">lonasalonandspa@gmail.com</a></li>
+          <li><a href="https://instagram.com/lonasalonandspa" target="_blank" rel="noopener">@lonasalonandspa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>&copy; <span id="yr">2026</span> Lona Salon &amp; Spa</span>
+      <span>Banjara Hills, Hyderabad</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<script>
+(function(){
+"use strict";
+
+/* ============================================================
+   0. CONSTANTS
+   ============================================================ */
+var WA        = "919133100556";
+var VIDEO_URL = "assets/hero-scrub.mp4";
+var VIDEO_BYTES = 6200000;          /* real byte size, patched after the encode */
+var POSTER    = "assets/hero-poster.jpg";
+
+var $  = function(s,r){ return (r||document).querySelector(s); };
+var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+
+var clamp = function(v,lo,hi){ return Math.min(hi,Math.max(lo,v)); };
+var smoothstep = function(p,e0,e1){
+  var t = clamp((p-e0)/(e1-e0),0,1);
+  return t*t*(3-2*t);
+};
+function rng(seed){
+  var s = seed>>>0;
+  return function(){ s = (s*1664525+1013904223)>>>0; return s/4294967296; };
+}
+function waLink(text){ return "https://wa.me/"+WA+"?text="+encodeURIComponent(text); }
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* ============================================================
+   1. THE FIVE STATIC-HERO GATES
+   These strings must match the CSS media query list exactly.
+   ============================================================ */
+var GATES = [
+  "(max-width: 720px)",
+  "(orientation: portrait) and (max-width: 1024px)",
+  "(orientation: portrait) and (pointer: coarse)",
+  "(orientation: landscape) and (pointer: coarse) and (max-height: 560px)",
+  "(prefers-reduced-motion: reduce)"
+];
+var MQLS = GATES.map(function(q){ return matchMedia(q); });
+
+/* ============================================================
+   2. TEXT SPLITTING (once, at load, seeded so it never jitters)
+   ============================================================ */
+function splitBand(band){
+  var h = band.querySelector("h2[data-split]");
+  if(!h) return;
+  var mode   = h.getAttribute("data-split");
+  var spread = parseFloat(band.getAttribute("data-spread")||"0.5");
+  var text   = h.textContent;
+  var r      = rng(1907 + text.length);
+
+  var sr = document.createElement("span");
+  sr.className = "vh";
+  sr.textContent = text;
+
+  var vis = document.createElement("span");
+  vis.setAttribute("aria-hidden","true");
+
+  var words = text.split(" ");
+  var totalChars = text.replace(/ /g,"").length;
+  var ci = 0;
+
+  words.forEach(function(word,wi){
+    var w = document.createElement("span");
+    w.className = "w";
+    if(mode === "word"){
+      w.style.setProperty("--th", (wi/Math.max(1,words.length) * 0.42).toFixed(4));
+    }
+    for(var i=0;i<word.length;i++){
+      if(mode === "char"){
+        var c = document.createElement("span");
+        c.className = "c";
+        c.textContent = word[i];
+        c.style.setProperty("--th", (ci/Math.max(1,totalChars)*spread + r()*0.06).toFixed(4));
+        c.style.setProperty("--jx", ((r()*2-1)*30).toFixed(1)+"px");
+        w.appendChild(c);
+        ci++;
+      } else {
+        w.appendChild(document.createTextNode(word[i]));
+      }
+    }
+    vis.appendChild(w);
+    if(wi < words.length-1) vis.appendChild(document.createTextNode(" "));
+  });
+
+  h.textContent = "";
+  h.appendChild(sr);
+  h.appendChild(vis);
+}
+
+/* ============================================================
+   3. THE BANDS
+   ============================================================ */
+var bandEls = $$(".band").map(function(el){
+  splitBand(el);
+  return {
+    el: el,
+    a: parseFloat(el.getAttribute("data-a")),
+    b: parseFloat(el.getAttribute("data-b")),
+    ramp: parseFloat(el.getAttribute("data-ramp")||"0") || 0,
+    first: el.classList.contains("band-1"),
+    last:  el.classList.contains("band-4"),
+    op: -1,
+    k:  -1
+  };
+});
+
+var loadK = 0, loadStart = 0;
+
+function updateCaptions(p){
+  for(var i=0;i<bandEls.length;i++){
+    var b = bandEls[i];
+    var f = Math.min(0.02,(b.b-b.a)/3);
+    var inRamp  = b.first ? 1 : smoothstep(p,b.a,b.a+f);
+    var outRamp = b.last  ? 1 : (1 - smoothstep(p,b.b-f,b.b));
+    var op = inRamp * outRamp;
+
+    var ramp = b.ramp || Math.min(0.025,(b.b-b.a)*0.35);
+    var k = clamp((p-b.a)/ramp,0,1);
+    if(b.first) k = Math.max(k,loadK);
+
+    if(Math.abs(op-b.op) > 0.004){
+      b.op = op;
+      b.el.style.opacity = op.toFixed(3);
+    }
+    if(Math.abs(k-b.k) > 0.008){
+      b.k = k;
+      b.el.style.setProperty("--k",k.toFixed(3));
+    }
+  }
+}
+
+function pinBandsFinal(){
+  bandEls.forEach(function(b){
+    b.op = -1; b.k = -1;
+    b.el.style.opacity = b.last ? "1" : "0";
+    b.el.style.setProperty("--k","1");
+  });
+}
+
+/* ============================================================
+   4. THE SCRUB ENGINE
+   ============================================================ */
+var hero   = $("#hero");
+var stage  = $("#stage");
+var video  = $("#hero-video");
+var poster = $("#poster");
+var ring   = $("#ring circle:last-of-type");
+var ringWrap = $("#ring-wrap");
+
+var target = 0, shown = 0, rafId = null, lastTick = 0;
+var heroOnScreen = true, scrubOn = false, videoOk = false;
+
+function heroProgress(){
+  var r = hero.getBoundingClientRect();
+  var range = hero.offsetHeight - window.innerHeight;
+  if(range <= 0) return 0;
+  return clamp(-r.top/range,0,1);
+}
+
+/* --- gated seeks, deadlock safe --- */
+var seekBusy = false, pendingTime = null;
+function requestSeek(t){
+  if(!videoOk || !video.duration || !isFinite(t)) return;
+  if(seekBusy){ pendingTime = t; return; }
+  seekBusy = true;
+  try { video.currentTime = t; } catch(e){ seekBusy = false; }
+}
+video.addEventListener("seeked",function(){
+  seekBusy = false;
+  if(pendingTime !== null){ var t = pendingTime; pendingTime = null; requestSeek(t); }
+});
+video.addEventListener("error",function(){
+  seekBusy = false; pendingTime = null; failVideo();
+});
+
+/* --- the lerp loop that rests --- */
+function tick(now){
+  var dt = Math.min(100, now - (lastTick || now));
+  lastTick = now;
+  var k = 0.16;
+  shown += (target - shown) * (1 - Math.pow(1-k, dt/16.667));
+
+  if(loadK < 1 && loadStart){
+    loadK = clamp((now - loadStart)/900,0,1);
+  }
+
+  var settled = Math.abs(target - shown) < 0.0005 && loadK >= 1;
+  if(settled){ shown = target; rafId = null; lastTick = 0; }
+  else { rafId = requestAnimationFrame(tick); }
+
+  if(videoOk && video.duration) requestSeek(shown * video.duration);
+  updateCaptions(shown);
+}
+function kick(){ if(rafId === null && heroOnScreen && scrubOn) rafId = requestAnimationFrame(tick); }
+function onScroll(){ target = heroProgress(); kick(); }
+
+if("IntersectionObserver" in window){
+  new IntersectionObserver(function(es){
+    heroOnScreen = es[0].isIntersecting;
+    if(heroOnScreen) kick();
+  },{rootMargin:"120px"}).observe(hero);
+}
+
+/* --- the blob loader with the honest ring --- */
+var heroInit = false;
+function initHeroOnce(){
+  if(heroInit) return;
+  heroInit = true;
+  loadStart = performance.now();
+
+  var probe = new Image();
+  probe.onload  = function(){ poster.style.backgroundImage = "url('"+POSTER+"')"; startBlob(); };
+  probe.onerror = startBlob;                 /* the designed gradient stays */
+  probe.src = POSTER;
+  setTimeout(startBlob, 4000);
+}
+
+var started = false;
+function startBlob(){
+  if(started) return;
+  started = true;
+  loadHeroBlob().catch(failVideo);
+}
+
+function loadHeroBlob(){
+  var ctrl = new AbortController();
+  var wd = setTimeout(function(){ ctrl.abort(); }, 20000);
+
+  var opts = {signal:ctrl.signal};
+  try { opts.priority = "low"; } catch(e){}
+
+  return fetch(VIDEO_URL,opts).then(function(res){
+    if(!res.ok) throw new Error("hero video "+res.status);
+    var total = Number(res.headers.get("Content-Length")) || VIDEO_BYTES;
+    if(!res.body || !res.body.getReader){
+      clearTimeout(wd);
+      return res.blob().then(attach);
+    }
+    var reader = res.body.getReader();
+    var chunks = [], got = 0, lastRing = 0;
+
+    function pump(){
+      return reader.read().then(function(r){
+        if(r.done){ clearTimeout(wd); return attach(new Blob(chunks)); }
+        clearTimeout(wd);
+        wd = setTimeout(function(){ ctrl.abort(); }, 20000);
+        chunks.push(r.value);
+        got += r.value.length;
+        var frac = Math.min(1, got/total);
+        var now = performance.now();
+        if(now - lastRing > 100 || frac === 1){
+          lastRing = now;
+          ring.style.setProperty("--ld", Math.round(126*(1-frac)));
+        }
+        return pump();
+      });
+    }
+    return pump();
+  });
+}
+
+function attach(blob){
+  ring.style.setProperty("--ld",0);
+  video.src = URL.createObjectURL(blob);
+  video.load();
+  video.addEventListener("canplay",function(){
+    videoOk = true;
+    requestSeek(heroProgress() * video.duration);
+    stage.classList.add("video-ready");
+  },{once:true});
+}
+
+function failVideo(){
+  videoOk = false;
+  stage.classList.add("video-failed");
+  if(ringWrap && !ringWrap.querySelector(".chev")){
+    ringWrap.innerHTML =
+      '<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg></span>';
+  }
+}
+
+/* --- arm and disarm from the live gates --- */
+function enableScrub(){
+  if(scrubOn) return;
+  scrubOn = true;
+  initHeroOnce();
+  window.addEventListener("scroll",onScroll,{passive:true});
+  window.addEventListener("resize",onScroll,{passive:true});
+  bandEls.forEach(function(b){ b.op = -1; b.k = -1; });
+  unpinAll();
+  updateCaptions(heroProgress());
+  onScroll();
+}
+function disableScrub(){
+  if(!scrubOn) return;
+  scrubOn = false;
+  window.removeEventListener("scroll",onScroll);
+  window.removeEventListener("resize",onScroll);
+  if(rafId !== null){ cancelAnimationFrame(rafId); rafId = null; }
+}
+function applyHeroMode(){
+  var gated = GATES.some(function(q){ return matchMedia(q).matches; });
+  if(gated) disableScrub(); else enableScrub();
+}
+MQLS.forEach(function(m){
+  if(m.addEventListener) m.addEventListener("change",applyHeroMode);
+  else if(m.addListener) m.addListener(applyHeroMode);
+});
+
+/* ============================================================
+   5. ENTRANCE CHOREOGRAPHY
+   ============================================================ */
+var io = ("IntersectionObserver" in window) ? new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(!e.isIntersecting) return;
+    var el = e.target;
+    el.classList.add("in");
+    io.unobserve(el);
+    var longest = 620 + el.children.length*80;
+    setTimeout(function(){ el.classList.add("done"); }, longest);
+  });
+},{rootMargin:"0px 0px -12% 0px",threshold:0.06}) : null;
+
+function armEntrances(){
+  if(!io) { $$(".rise,.stag,.divider").forEach(function(e){ e.classList.add("in","done"); }); return; }
+  $$(".rise,.stag,.divider").forEach(function(e){ io.observe(e); });
+}
+
+/* ============================================================
+   6. THE DESCENT LINE (steps rail)
+   ============================================================ */
+var rail = $("#rail"), railDrawn = $("#rail-drawn");
+var railRaf = null;
+function drawRail(){
+  railRaf = null;
+  if(!rail || !railDrawn) return;
+  var r = rail.getBoundingClientRect();
+  var vh = window.innerHeight;
+  var p = clamp((vh*0.82 - r.top)/(r.height + vh*0.2),0,1);
+  railDrawn.style.height = (p*100).toFixed(1)+"%";
+}
+function onRailScroll(){ if(railRaf === null) railRaf = requestAnimationFrame(drawRail); }
+
+/* ============================================================
+   7. NAV
+   ============================================================ */
+var nav = $("#nav"), burger = $("#burger"), navLinks = $("#nav-links");
+var navRaf = null, navSolid = false;
+function navScroll(){
+  navRaf = null;
+  var s = window.scrollY > 40;
+  if(s !== navSolid){ navSolid = s; nav.classList.toggle("solid",s); }
+}
+function onNavScroll(){ if(navRaf === null) navRaf = requestAnimationFrame(navScroll); }
+window.addEventListener("scroll",onNavScroll,{passive:true});
+navScroll();
+
+burger.addEventListener("click",function(){
+  var open = navLinks.classList.toggle("open");
+  burger.setAttribute("aria-expanded",open ? "true":"false");
+});
+navLinks.addEventListener("click",function(e){
+  if(e.target.tagName === "A"){
+    navLinks.classList.remove("open");
+    burger.setAttribute("aria-expanded","false");
+  }
+});
+
+/* ============================================================
+   8. THE HOLD MOMENT
+   ============================================================ */
+var holdStage = $("#hold-stage"), holdBtn = $("#hold-btn"), holdOut = $("#hold-out");
+var holdPath  = $("#ostar-path");
+var holdV = 0, holding = false, holdRaf = null, holdLast = 0, holdDone = false;
+
+if(holdPath && holdPath.getTotalLength){
+  try{
+    var L = holdPath.getTotalLength();
+    holdStage.style.setProperty("--slen",L.toFixed(1));
+  }catch(e){}
+}
+
+function holdTick(now){
+  var dt = Math.min(80, now - (holdLast||now));
+  holdLast = now;
+  /* once it is completed it stays completed: the visitor earned it.
+     Only an unfinished hold eases back down on release. */
+  holdV = holdDone ? 1 : clamp(holdV + (holding ? dt/1100 : -dt/900), 0, 1);
+  holdStage.style.setProperty("--h",holdV.toFixed(3));
+
+  if(holdV >= 1 && !holdDone){
+    holdDone = true;
+    holdStage.classList.add("done");
+    holdOut.classList.add("lit");
+  }
+  if(!holdDone && ((holding && holdV < 1) || (!holding && holdV > 0))){
+    holdRaf = requestAnimationFrame(holdTick);
+  } else {
+    holdRaf = null; holdLast = 0;
+  }
+}
+function holdStart(e){
+  if(e && e.cancelable) e.preventDefault();
+  holding = true;
+  if(holdRaf === null) holdRaf = requestAnimationFrame(holdTick);
+}
+function holdEnd(){
+  holding = false;
+  if(holdRaf === null && holdV > 0) holdRaf = requestAnimationFrame(holdTick);
+}
+["pointerdown"].forEach(function(t){ holdBtn.addEventListener(t,holdStart); });
+["pointerup","pointercancel","pointerleave","blur"].forEach(function(t){ holdBtn.addEventListener(t,holdEnd); });
+holdBtn.addEventListener("keydown",function(e){
+  if(e.key === " " || e.key === "Enter"){ e.preventDefault(); holdStart(); }
+});
+holdBtn.addEventListener("keyup",function(e){
+  if(e.key === " " || e.key === "Enter") holdEnd();
+});
+
+function holdFinishNow(){
+  holding = false;
+  if(holdRaf !== null){ cancelAnimationFrame(holdRaf); holdRaf = null; }
+  holdV = 1; holdDone = true;
+  holdStage.style.setProperty("--h","1");
+  holdStage.classList.add("done");
+  holdOut.classList.add("lit");
+}
+function holdReset(){
+  if(holdDone) return;
+  holdStage.style.setProperty("--h","0");
+}
+
+/* ============================================================
+   9. THE SHOP BASKET
+   ============================================================ */
+var basketItems = $("#basket-items"), basketSend = $("#basket-send");
+var picks = [];
+
+function renderBasket(){
+  if(picks.length === 0){
+    basketItems.innerHTML = "<em>Nothing added yet.</em>";
+    basketSend.setAttribute("aria-disabled","true");
+    basketSend.setAttribute("href","#shop");
+  } else {
+    basketItems.textContent = picks.join(", ");
+    basketSend.removeAttribute("aria-disabled");
+    basketSend.setAttribute("href", waLink(
+      "Hello Lona Salon & Spa. I would like to book: " + picks.join(", ") +
+      ". Could you tell me the times you have free and the price?"
+    ));
+    basketSend.setAttribute("target","_blank");
+    basketSend.setAttribute("rel","noopener");
+  }
+  updateContactLink();
+}
+
+$$(".tile").forEach(function(tile){
+  var btn = tile.querySelector(".add");
+  var name = tile.getAttribute("data-name").replace(/&amp;/g,"&");
+  btn.addEventListener("click",function(){
+    var i = picks.indexOf(name);
+    if(i === -1){ picks.push(name); tile.classList.add("added"); btn.textContent = "Added"; }
+    else { picks.splice(i,1); tile.classList.remove("added"); btn.textContent = "Add"; }
+    btn.setAttribute("aria-pressed", i === -1 ? "true" : "false");
+    renderBasket();
+  });
+  btn.setAttribute("aria-pressed","false");
+  btn.setAttribute("aria-label","Add "+name+" to your list");
+});
+renderBasket();
+
+/* ============================================================
+   10. THE CALENDAR
+   ============================================================ */
+var calDays = $("#cal-days"), calTitle = $("#cal-title");
+var calPrev = $("#cal-prev"), calNext = $("#cal-next");
+var calGo = $("#cal-go"), calNote = $("#cal-note");
+var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+var today = new Date(); today.setHours(0,0,0,0);
+var viewY = today.getFullYear(), viewM = today.getMonth();
+var selDate = null, selSlot = null;
+
+function renderCal(){
+  calTitle.textContent = MONTHS[viewM] + " " + viewY;
+  calDays.innerHTML = "";
+
+  var first = new Date(viewY,viewM,1);
+  var lead = (first.getDay() + 6) % 7;              /* Monday first */
+  var days = new Date(viewY,viewM+1,0).getDate();
+
+  for(var i=0;i<lead;i++){
+    var blank = document.createElement("span");
+    blank.className = "day blank";
+    blank.setAttribute("aria-hidden","true");
+    calDays.appendChild(blank);
+  }
+  for(var d=1;d<=days;d++){
+    (function(d){
+      var dt = new Date(viewY,viewM,d);
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "day";
+      btn.textContent = d;
+      btn.setAttribute("aria-label", d+" "+MONTHS[viewM]+" "+viewY);
+      if(dt < today){ btn.disabled = true; }
+      if(selDate && dt.getTime() === selDate.getTime()){
+        btn.classList.add("sel");
+        btn.setAttribute("aria-pressed","true");
+      }
+      btn.addEventListener("click",function(){
+        selDate = dt;
+        renderCal();
+        updateCalGo();
+      });
+      calDays.appendChild(btn);
+    })(d);
+  }
+  var atStart = (viewY === today.getFullYear() && viewM === today.getMonth());
+  calPrev.disabled = atStart;
+}
+
+function fmtDate(d){
+  return d.getDate()+" "+MONTHS[d.getMonth()]+" "+d.getFullYear();
+}
+function updateCalGo(){
+  if(!selDate){
+    calGo.setAttribute("aria-disabled","true");
+    calGo.setAttribute("href","#calendar");
+    calNote.textContent = "Pick a date to continue";
+    return;
+  }
+  var msg = "Hello Lona Salon & Spa. I would like an appointment on " + fmtDate(selDate);
+  if(selSlot) msg += " in the " + selSlot.toLowerCase();
+  if(picks.length) msg += ", for: " + picks.join(", ");
+  msg += ". Does that work?";
+  calGo.removeAttribute("aria-disabled");
+  calGo.setAttribute("href", waLink(msg));
+  calGo.setAttribute("target","_blank");
+  calGo.setAttribute("rel","noopener");
+  calNote.textContent = fmtDate(selDate) + (selSlot ? ", " + selSlot.toLowerCase() : "");
+}
+
+calPrev.addEventListener("click",function(){
+  if(viewM === 0){ viewM = 11; viewY--; } else viewM--;
+  renderCal();
+});
+calNext.addEventListener("click",function(){
+  if(viewM === 11){ viewM = 0; viewY++; } else viewM++;
+  renderCal();
+});
+$$(".slot").forEach(function(s){
+  s.setAttribute("aria-pressed","false");
+  s.addEventListener("click",function(){
+    var v = s.getAttribute("data-slot");
+    if(selSlot === v){ selSlot = null; }
+    else { selSlot = v; }
+    $$(".slot").forEach(function(o){
+      var on = o === s && selSlot !== null;
+      o.classList.toggle("sel",on);
+      o.setAttribute("aria-pressed",on?"true":"false");
+    });
+    updateCalGo();
+  });
+});
+renderCal();
+updateCalGo();
+
+/* ============================================================
+   11. CONTACT AND NAV WHATSAPP LINKS
+   ============================================================ */
+function updateContactLink(){
+  var base = "Hello Lona Salon & Spa. I would like to book an appointment";
+  if(picks.length) base += " for: " + picks.join(", ");
+  base += ". When are you free?";
+  var href = waLink(base);
+  ["#contact-wa","#nav-book"].forEach(function(sel){
+    var el = $(sel);
+    if(!el) return;
+    if(sel === "#nav-book"){
+      el.setAttribute("href", href);
+    } else {
+      el.setAttribute("href", href);
+    }
+    el.setAttribute("target","_blank");
+    el.setAttribute("rel","noopener");
+  });
+}
+updateContactLink();
+
+/* ============================================================
+   12. THE ANSWERS ACCORDION
+   ============================================================ */
+$$(".qa").forEach(function(qa){
+  var btn = qa.querySelector("button");
+  var ans = qa.querySelector(".ans");
+  btn.addEventListener("click",function(){
+    var open = btn.getAttribute("aria-expanded") === "true";
+    if(open){
+      ans.style.height = ans.scrollHeight+"px";
+      requestAnimationFrame(function(){ ans.style.height = "0px"; });
+      btn.setAttribute("aria-expanded","false");
+      qa.removeAttribute("open");
+    } else {
+      ans.style.height = ans.scrollHeight+"px";
+      btn.setAttribute("aria-expanded","true");
+      qa.setAttribute("open","");
+      ans.addEventListener("transitionend",function te(){
+        if(btn.getAttribute("aria-expanded") === "true") ans.style.height = "auto";
+        ans.removeEventListener("transitionend",te);
+      });
+    }
+  });
+});
+window.addEventListener("resize",function(){
+  $$(".qa[open] .ans").forEach(function(a){ a.style.height = "auto"; });
+},{passive:true});
+
+/* ============================================================
+   13. SECTION IMAGE PLATES (swap in real files when they exist)
+   ============================================================ */
+$$(".plate[data-img]").forEach(function(p){
+  var src = p.getAttribute("data-img");
+  var im = new Image();
+  im.onload = function(){
+    p.style.setProperty("--img","url('"+src+"')");
+    p.classList.add("has-img");
+  };
+  im.src = src;
+});
+
+/* ============================================================
+   14. THE MOTES
+   ============================================================ */
+(function(){
+  var host = $("#motes");
+  if(!host) return;
+  var r = rng(4211);
+  for(var i=0;i<8;i++){
+    var m = document.createElement("span");
+    m.className = "mote";
+    m.style.left = (r()*100).toFixed(1)+"%";
+    m.style.bottom = (-10 - r()*20).toFixed(1)+"%";
+    var dur = (70 + r()*55).toFixed(0);
+    m.style.animationDuration = dur+"s";
+    m.style.animationDelay = "-"+(r()*dur).toFixed(0)+"s";
+    m.style.opacity = (0.08 + r()*0.14).toFixed(2);
+    var sz = (2 + r()*2.5).toFixed(1);
+    m.style.width = sz+"px"; m.style.height = sz+"px";
+    host.appendChild(m);
+  }
+})();
+
+/* ============================================================
+   15. REDUCED MOTION, LIVE, IN BOTH DIRECTIONS
+   ============================================================ */
+var rmq = matchMedia("(prefers-reduced-motion: reduce)");
+
+function pinToFinalStates(){
+  $$(".rise,.stag,.divider").forEach(function(e){ e.classList.add("in","done","pinned"); });
+  if(railDrawn) railDrawn.style.height = "100%";
+  pinBandsFinal();
+  holdFinishNow();
+  window.removeEventListener("scroll",onRailScroll);
+  if(railRaf !== null){ cancelAnimationFrame(railRaf); railRaf = null; }
+}
+function unpinAll(){
+  $$(".pinned").forEach(function(e){ e.classList.remove("pinned"); });
+  window.addEventListener("scroll",onRailScroll,{passive:true});
+  onRailScroll();
+}
+
+function onRMChange(e){
+  if(e.matches) pinToFinalStates();
+  else { applyHeroMode(); armEntrances(); unpinAll(); }
+}
+if(rmq.addEventListener) rmq.addEventListener("change",onRMChange);
+else if(rmq.addListener) rmq.addListener(onRMChange);
+
+/* ============================================================
+   16. PAUSE ON HIDDEN TABS
+   ============================================================ */
+document.addEventListener("visibilitychange",function(){
+  document.body.classList.toggle("paused",document.hidden);
+});
+
+/* ============================================================
+   17. GO
+   ============================================================ */
+if(rmq.matches){
+  pinToFinalStates();
+} else {
+  armEntrances();
+  window.addEventListener("scroll",onRailScroll,{passive:true});
+  onRailScroll();
+  holdReset();
+}
+applyHeroMode();
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# The 10K Websites skill package itself is a tool, not project content
+10k-websites-skill.zip
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor cruft
+*.swp
+*~
