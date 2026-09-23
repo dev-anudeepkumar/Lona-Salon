@@ -980,9 +980,9 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
     <div class="hold-stage" id="hold-stage">
       <span class="hold-glow" aria-hidden="true"></span>
       <svg class="hold-o" viewBox="0 0 200 200" aria-hidden="true">
-        <ellipse class="oring" cx="100" cy="100" rx="62" ry="80"/>
-        <path class="ostarfill" d="M100 58 Q102.6 79 127 85 Q102.6 91 100 112 Q97.4 91 73 85 Q97.4 79 100 58 Z"/>
-        <path class="ostar" id="ostar-path" d="M100 58 Q102.6 79 127 85 Q102.6 91 100 112 Q97.4 91 73 85 Q97.4 79 100 58 Z"/>
+        <circle class="oring" cx="100" cy="100" r="72"/>
+        <path class="ostarfill" d="M100 73 Q102.6 94 127 100 Q102.6 106 100 127 Q97.4 106 73 100 Q97.4 94 100 73 Z"/>
+        <path class="ostar" id="ostar-path" d="M100 73 Q102.6 94 127 100 Q102.6 106 100 127 Q97.4 106 73 100 Q97.4 94 100 73 Z"/>
       </svg>
     </div>
 
@@ -1264,7 +1264,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
    ============================================================ */
 var WA        = "919133100556";
 var VIDEO_URL = "assets/hero-scrub.mp4";
-var VIDEO_BYTES = 6200000;          /* real byte size, patched after the encode */
+var VIDEO_BYTES = 3390410;          /* real byte size of assets/hero-scrub.mp4 */
 var POSTER    = "assets/hero-poster.jpg";
 
 var $  = function(s,r){ return (r||document).querySelector(s); };

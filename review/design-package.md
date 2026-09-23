@@ -58,17 +58,31 @@ Superseded: Bodoni Moda / Jost / Space Mono.
 
 **Adjustments Cinzel forced.** It is far wider than Bodoni and capitals-first, so: heading sizes cut by roughly 30 percent, tracking moved from negative to positive, leading opened from 1.08 to 1.26, body size raised to clamp(16.5px, 1.18vw, 19px) to compensate for the serif's smaller x-height, and the three italic lines (the About pull quote, the pause line, the services closer) moved to the body serif because Cinzel has no italic. Re-verified with no overflow and no clipped headings at 1440, 1280, 1024, 768, 375 and 320.
 
-## 4. Band map (hero 400vh, four bands)
+## 4. Band map (hero 560vh, four bands)
+
+**Hero footage: the full history, and what actually shipped.**
+
+1. **Descent through the salon, Kling v3.0.** The original concept: a camera falls through the room past the brass pendant, through steam, resting on the mirror station. Rejected on inspection: the camera barely moved. Only the steam visibly animated.
+2. **Descent through the salon, Seedance 2.5.** Same concept, a different top-tier model, a much more literal motion prompt. Rejected on inspection: a small amount of real movement in the first second (the framing settles as the top of frame crops in), then the camera holds nearly still for the remaining five seconds. Better than attempt 1, not a fix.
+3. **The oil bloom, Kling v3.0.** A pivot to an abstract concept (a drop of gold oil falling through dark water, blooming into ribbons of light, settling into a circle echoing the logo's O), on the reasoning that two failures on two different models against the same architectural frame meant the frame was the problem, not the wording. This take delivered real, continuous, correctly-resting motion. Recommended as the shipped asset.
+
+**The owner reviewed all three and chose attempt 2 (the Seedance descent) over the recommendation**, after the motion limitation was restated plainly. That is what shipped: `assets/hero-scrub.mp4`, encoded from `hero-raw-v2.mp4`. The known trade-off is on the record here, not hidden: scrubbing this hero maps to real but modest motion, mostly in the first ~15% of the scroll range, with the remaining stretch driven by the footage's own atmosphere (steam) rather than a changing camera position. The oil bloom take is preserved in `review/raw/hero-raw-bloom.mp4` if this is ever revisited.
+
+One processing fix applied before shipping: the raw take's first ~0.65s carried a stray black letterbox strip at the top of frame (an artifact of the render, not present anywhere else in the clip). The encode trims that head rather than cropping the whole clip, so `hero-scrub.mp4` runs about 5.4s, not the full 6.
 
 | Band | Range | Footage moment | Copy (verbatim) | Entrance |
 |---|---|---|---|---|
-| 1 | 0.00–0.20 | High in the warm dark, brass pendant drifting up past the lens | "Nothing begins until we agree." | Drift-down |
-| 2 | 0.26–0.46 | Descending, steam gathering, light softening | "You tell us. We say it back. Then we start." | Blur-to-sharp |
-| 3 | 0.52–0.72 | Through the steam, droplets on the lens, a beat of blur | "Hair. Skin. Nails. Bridal. Grooming." | Grid snap-align |
-| 4 | 0.80–1.00 | The mirror station settles, glowing gold, everything at rest | H: "LONA Salon & Spa"<br>Sub: "Banjara Hills, Hyderabad."<br>Buttons: "Book on WhatsApp" / "Call us" | Word-by-word rise, staged settle |
+| 1 | 0.00–0.22 | High in the warm dark, brass pendant settling into frame, steam beginning to drift | "Nothing begins until we agree." | Drift-down |
+| 2 | 0.27–0.49 | Steam thickening, light softening, the frame otherwise held | "You tell us. We say it back. Then we start." | Blur-to-sharp |
+| 3 | 0.54–0.76 | Steam continuing to build through the room | "Hair. Skin. Nails. Bridal. Grooming." | Grid snap-align |
+| 4 | 0.81–1.00 | The mirror station in view, glowing gold in the dark, steam settled | H: "LONA Salon & Spa"<br>Sub: "Banjara Hills, Hyderabad."<br>Buttons: "Book on WhatsApp" / "Call us" | Word-by-word rise, staged settle |
+
+Band ranges widened from an original 400vh hero to 560vh after the flick test showed the first three beats holding for only 3 to 4 normal scroll flicks. Now 7, 7, 6 and 16 full-opacity flicks respectively at 120px steps; none skippable even at 360px steps. Re-validated against the real, final footage: legibility checked at both ends of every band's plateau, all eight samples read cleanly.
 
 Band 1 skips ease-in and gets the one-time load ramp. Band 4 skips ease-out.
 Band 3's five flat words are a deliberate brand device. They stay.
+
+The ending frame (the lit mirror station) is reused as `assets/step-02.jpg`, cropped to feature the mirror and marble counter, for the "we say it back" step in section 6.1. No separate generation was needed for that slot.
 
 ## 5. Static-hero copy (phones, portrait tablets, landscape phones, reduced motion)
 
