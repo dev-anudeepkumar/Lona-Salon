@@ -1800,7 +1800,7 @@ function updateCalGo(){
   var msg = "Hello Lona Salon & Spa. I would like an appointment on " + fmtDate(selDate);
   if(selSlot) msg += " at " + selSlot;
   if(picks.length) msg += ", for: " + picks.join(", ");
-  msg += ". Does that work?";
+  msg += ". Please confirm.";
   calGo.removeAttribute("aria-disabled");
   calGo.setAttribute("href", waLink(msg));
   calGo.setAttribute("target","_blank");
