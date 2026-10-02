@@ -12,3 +12,8 @@ desktop.ini
 
 # Claude Code local session/tool state, never project content
 .claude/
+
+# Node server dependencies (for hosts that need a Node process to serve
+# the static site, e.g. Render/Railway/Replit, as opposed to Netlify
+# which serves lona-salon-spa/ directly, no server needed)
+node_modules/

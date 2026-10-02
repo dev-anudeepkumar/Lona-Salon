@@ -1,0 +1,23 @@
+{
+  "name": "lona-salon-spa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A cinematic scroll-driven website for Lona Salon & Spa, Banjara Hills, Hyderabad. Served as static files via server.js on hosts that need a Node process (Render, Railway, Replit, Heroku). Netlify serves lona-salon-spa/ directly and does not use this.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-anudeepkumar/Lona-Salon.git"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dev-anudeepkumar/Lona-Salon/issues"
+  },
+  "homepage": "https://github.com/dev-anudeepkumar/Lona-Salon#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
