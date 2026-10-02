@@ -148,14 +148,15 @@ Basket button: "Send my list on WhatsApp"
 
 Handling: a basket in the page's own memory, no server, no payment. Message is composed and handed to `wa.me`. Data shape kept clean so a payment platform can be wired to the same tiles later without a rebuild.
 
-### 6.6 Calendar — centred month grid plus time chips
+### 6.6 Calendar — centred month grid plus a scrollable strip of half-hour times
 
 Kicker: "Calendar" · Headline: "Pick a day that suits you."
 Body: "Choose a date and a rough time. We will confirm on WhatsApp, usually the same day."
-Time chips: "Morning" / "Afternoon" / "Evening"
 Button: "Request this date"
 
-Past dates disabled. Selection composes a WhatsApp message with the date, the time preference, and anything already in the basket.
+**Time chips, revised.** Originally three broad chips (Morning / Afternoon / Evening). Changed at the owner's request to a specific half-hour pick: 10:00 AM to 7:30 PM in 30-minute steps, generated in JS from one pair of constants (`SLOT_START_MIN` / `SLOT_END_MIN` in `index.html`) rather than hand-written, so the range is a one-line change once real hours are known. Twenty chips at that range, which would wrap into a tall stack at the calendar box's width, so they sit in a horizontally scrollable strip instead, with a soft edge fade hinting there is more to scroll. This is still a request, not a live booking: the composed WhatsApp message asks "Does that work?" and the body copy above it already says confirmation comes separately, so offering a specific time is not a claim about the salon's actual hours. The 10:00 AM to 7:30 PM range is a placeholder pending the owner's real hours, same status as the rest of the Hours gap noted at the top of this document.
+
+Past dates disabled. Selection composes a WhatsApp message with the date, the chosen time ("at 10:30 AM", not the old "in the morning" phrasing), and anything already in the basket.
 
 ### 6.7 Answers — full-width accordion
 
